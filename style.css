@@ -1855,7 +1855,7 @@ body { background: var(--bg); }
     z-index: 3;
     left: 2.4vw;
     right: 2.4vw;
-    bottom: 1.5vh;
+    bottom: clamp(120px, 18vh, 260px);
     align-items: flex-start;
     pointer-events: none;
 }
@@ -2087,11 +2087,13 @@ body.has-sticky-cta { padding-bottom: 0; }
 
 @media (max-width: 600px) {
     .lang-btn { display: none; }
+    .intro-section { min-height: 100svh; }
     .intro-video { object-position: center center; }
     .intro-inner {
         left: 18px;
         right: 18px;
-        bottom: max(104px, 15svh, calc(72px + env(safe-area-inset-bottom)));
+        bottom: max(168px, calc(128px + env(safe-area-inset-bottom)));
+        bottom: max(clamp(168px, 24svh, 240px), calc(128px + env(safe-area-inset-bottom)));
     }
     .intro-title {
         width: auto;
