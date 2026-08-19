@@ -2091,7 +2091,7 @@ body.has-sticky-cta { padding-bottom: 0; }
     .intro-inner {
         left: 18px;
         right: 18px;
-        bottom: max(72px, env(safe-area-inset-bottom));
+        bottom: max(104px, 15svh, calc(72px + env(safe-area-inset-bottom)));
     }
     .intro-title {
         width: auto;
