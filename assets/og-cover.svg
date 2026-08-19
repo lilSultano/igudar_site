@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0E1114"/>
+  <defs>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(850 235) rotate(90) scale(360)"><stop stop-color="#4D6F8B" stop-opacity=".28"/><stop offset="1" stop-color="#0E1114" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#halo)"/>
+  <g transform="translate(38 28)">
+    <path d="M8 35L19 40L20 24L9 22L8 35ZM20 7H9L9 19L20 20L20 7ZM49 35L38 40L37 24L48 22L49 35ZM37 7H48L48 19L37 20L37 7ZM28 7H23L23 21L29 22L35 21L35 7H28Z" fill="#F1F1F1"/>
+    <path d="M23 45L29 48L36 45L35 25H23V45Z" fill="#4D6F8B"/>
+    <text x="72" y="39" fill="#F1F1F1" font-family="Arial, sans-serif" font-size="25" font-weight="600" letter-spacing="1">IGUDAR</text>
+  </g>
+  <text x="42" y="338" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="154" font-weight="500" letter-spacing="-9">IGUDAR</text>
+  <text x="45" y="430" fill="#D8DBDE" font-family="Arial, sans-serif" font-size="32">Il tuo coworker AI per la sicurezza.</text>
+  <text x="45" y="484" fill="#8FB4D0" font-family="Arial, sans-serif" font-size="18">Digital twin, simulazioni e piano tecnico</text>
+  <path d="M42 550H1158" stroke="#3A4149"/>
+  <text x="42" y="591" fill="#7E8388" font-family="monospace" font-size="12" letter-spacing="2">IGUDAR.IT</text>
+  <text x="1158" y="591" text-anchor="end" fill="#7E8388" font-family="monospace" font-size="12" letter-spacing="2">DIGITAL TWIN / SIMULATION / AI</text>
+</svg>

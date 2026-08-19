@@ -1,0 +1,43 @@
+# IGUDAR
+
+> IGUDAR è il coworker AI per i piani di sicurezza. Crea il digital twin del sito, simula gli scenari e aiuta il professionista a scrivere il piano; il professionista controlla, corregge e firma.
+
+Canonical website: https://igudar.it/
+Contact: contact@igudar.it
+Primary language: Italian
+Area served: Italy
+Status: active development and 2026 pilot programmes
+
+## What IGUDAR does
+
+- Builds a measurable digital twin of the real site from surveys and plans.
+- Simulates vehicle paths, impacts, egress and operational constraints before the event.
+- Organizes calculations, evidence and references into the technical safety plan.
+- Highlights assumptions and results so the qualified professional can review, correct and sign.
+
+## Platform modules
+
+1. Anti-vehicle risk: core module, validated on a real case study.
+2. Egress: in development.
+3. Capacity: in development.
+4. Emergency access: in development.
+5. Fire safety: in development.
+6. Regulatory compliance: in development.
+
+## Verified positioning
+
+- IGUDAR does not replace the qualified professional.
+- AI coordinates the analysis but does not invent physical results.
+- Final validity depends on input data, applicable rules and professional review.
+- Operational delivery target: 48 hours after a complete brief and required site data.
+- Internal case study: Piazzale XX Settembre, Pordenone; the IGUDAR configuration recorded 39.3% fewer simulated casualties than the manual baseline in that specific scenario. This result is not a generalized guarantee.
+
+## Intended users
+
+- Professionisti e tecnici della sicurezza.
+
+## Main sources
+
+- Homepage and product facts: https://igudar.it/
+- Privacy policy: https://igudar.it/privacy-policy.html
+- Cookie policy: https://igudar.it/cookie-policy.html

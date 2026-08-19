@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta name="google-site-verification" content="nN8p-gAMRYsLFjr36QF_onqo87UpX6CJcv8KYTWXtKY" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGUDAR | Coworker AI per i piani di sicurezza</title>
+    <meta name="description"
+        content="IGUDAR crea il digital twin del sito, simula gli scenari e ti aiuta a scrivere il piano di sicurezza. Tu controlli e firmi.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#0E1114">
+    <meta name="color-scheme" content="dark">
+    <link rel="canonical" href="https://igudar.it/">
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/logo-search.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="assets/logo-search.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="IGUDAR">
+    <meta property="og:title" content="IGUDAR — Il coworker AI per la sicurezza">
+    <meta property="og:description"
+        content="Crea il digital twin del sito, simula gli scenari e ti aiuta a scrivere il piano di sicurezza.">
+    <meta property="og:url" content="https://igudar.it/">
+    <meta property="og:image" content="https://igudar.it/assets/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="IGUDAR — Coworker AI per i piani di sicurezza">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IGUDAR — Il coworker AI per la sicurezza">
+    <meta name="twitter:description"
+        content="Crea il digital twin del sito, simula gli scenari e ti aiuta a scrivere il piano di sicurezza.">
+    <meta name="twitter:image" content="https://igudar.it/assets/og-cover.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://igudar.it/#website",
+          "url": "https://igudar.it/",
+          "name": "IGUDAR",
+          "alternateName": "IGUDAR AI Coworker",
+          "inLanguage": "it-IT",
+          "publisher": {"@id": "https://igudar.it/#organization"}
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://igudar.it/#organization",
+          "name": "IGUDAR",
+          "url": "https://igudar.it/",
+          "email": "contact@igudar.it",
+          "description": "Coworker AI per creare digital twin, simulazioni e piani di sicurezza.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://igudar.it/assets/logo-search.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://igudar.it/assets/og-cover.png",
+          "areaServed": {"@type": "Country", "name": "Italy"}
+        },
+        {
+          "@type": ["SoftwareApplication", "Product"],
+          "@id": "https://igudar.it/#platform",
+          "name": "IGUDAR",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Web",
+          "url": "https://igudar.it/#platform",
+          "description": "Coworker AI che crea il digital twin, simula gli scenari e supporta la redazione del piano di sicurezza.",
+          "brand": {"@id": "https://igudar.it/#organization"}
+        }
+      ]
+    }
+    </script>
+
+    <!-- Avacy Cookie Consent -->
+    <script id='oil-configuration' type='application/configuration'
+        data-remote-config='https://igudar.avacy-cdn.com/config/igudar/4125e2e5-4762-4b36-a372-154ff3115007/banner.json'></script>
+    <script src='https://igudar.avacy-cdn.com/current/dist/oilstub.min.js'></script>
+    <script src='https://igudar.avacy-cdn.com/current/dist/oil.min.js'></script>
+</head>
+
+<body>
+
+    <!-- INTRO + HERO -->
+    <div class="opening-sequence">
+        <!-- VIDEO ENTRY -->
+        <section class="intro-section" id="introSection">
+            <video class="intro-video" autoplay muted loop playsinline preload="auto"
+                aria-label="Visualizzazione IGUDAR in movimento">
+                <source src="assets/IGUDAR_VIDEO.mp4" type="video/mp4">
+            </video>
+            <div class="intro-video-shade" aria-hidden="true"></div>
+
+            <div class="intro-inner">
+                <img class="intro-mark" src="assets/igudar-mark.svg" alt="" width="424" height="394" aria-hidden="true">
+                <div class="intro-title" id="introTitle" aria-label="IGUDAR"></div>
+                <div class="intro-divider" id="introDivider"></div>
+            </div>
+        </section>
+
+        <!-- NAV -->
+        <nav class="nav">
+            <div class="nav-inner">
+                <a class="nav-logo" href="#" aria-label="IGUDAR">
+                    <img class="nav-mark" src="assets/igudar-mark.svg" alt="" width="424" height="394"
+                        aria-hidden="true">
+                    <span class="logo-text">IGUDAR</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#platform" data-en="How it works" data-it="Come lavora">Come lavora</a>
+                    <a href="#method" data-en="Result" data-it="Risultato">Risultato</a>
+                    <a href="#compliance" data-en="Control" data-it="Controllo">Controllo</a>
+                    <a href="#contact" class="nav-cta" data-en="Request Demo" data-it="Richiedi Demo">Richiedi Demo</a>
+                </div>
+                <a href="#contact" class="nav-mobile-cta" data-en="Get Started" data-it="Richiedi Demo">Richiedi Demo</a>
+                <button class="lang-btn" id="langToggle">EN</button>
+            </div>
+        </nav>
+
+        <!-- SECOND VIEWPORT -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="flicker-text" data-en="Your AI coworker<br>for safety."
+                    data-it="Il tuo coworker AI<br>per la sicurezza.">Il tuo coworker AI<br>per la sicurezza.</h1>
+                <p class="hero-sub"
+                    data-en="It builds the site's digital twin, simulates scenarios and helps you write the safety plan. You review, correct and sign."
+                    data-it="Crea il digital twin del sito, simula gli scenari e ti aiuta a scrivere il piano di sicurezza. Tu controlli, correggi e firmi.">
+                    Crea il digital twin del sito, simula gli scenari e ti aiuta a scrivere il piano di sicurezza. Tu
+                    controlli, correggi e firmi.</p>
+                <div class="hero-actions">
+                    <a href="#platform" class="btn-primary">
+                        <span data-en="See how it works" data-it="Guarda come lavora">Guarda come lavora</span>
+                        <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn-ghost" data-en="Contact us" data-it="Contattaci">Contattaci</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 01 — AI COWORKER -->
+    <section class="section" id="platform">
+        <div class="container">
+            <div class="section-num reveal">01</div>
+            <p class="section-tag reveal" data-en="THE AI COWORKER" data-it="IL COWORKER AI">IL COWORKER AI</p>
+            <h2 class="reveal" data-en="From digital twin<br>to safety plan."
+                data-it="Dal digital twin<br>al piano di sicurezza.">Dal digital twin<br>al piano di sicurezza.</h2>
+            <p class="lead reveal"
+                data-en="You provide the site data. IGUDAR reconstructs the space, runs the simulations and works with you on the safety plan."
+                data-it="Tu fornisci i dati del sito. IGUDAR ricostruisce lo spazio, esegue le simulazioni e lavora con te al piano di sicurezza.">
+                Tu fornisci i dati del sito. IGUDAR ricostruisce lo spazio, esegue le simulazioni e lavora con te al
+                piano di sicurezza.</p>
+
+            <div class="pipeline coworker-flow reveal">
+                <div class="pipe-step">
+                    <div class="pipe-num">01</div>
+                    <h3>Digital twin</h3>
+                    <p data-en="Turns surveys and plans into a measurable digital copy of the real site."
+                        data-it="Trasforma rilievi e planimetrie in una copia digitale misurabile del sito reale.">
+                        Trasforma rilievi e planimetrie in una copia digitale misurabile del sito reale.</p>
+                </div>
+                <div class="pipe-step">
+                    <div class="pipe-num">02</div>
+                    <h3 data-en="Simulation" data-it="Simulazione">Simulazione</h3>
+                    <p data-en="Tests vehicle paths, impacts, egress and operational constraints before the event."
+                        data-it="Prova traiettorie veicolari, impatti, esodo e vincoli operativi prima dell'evento.">
+                        Prova traiettorie veicolari, impatti, esodo e vincoli operativi prima dell'evento.</p>
+                </div>
+                <div class="pipe-step">
+                    <div class="pipe-num">03</div>
+                    <h3 data-en="Plan" data-it="Piano">Piano</h3>
+                    <p data-en="Organises calculations, evidence and references into the technical safety plan."
+                        data-it="Organizza calcoli, evidenze e riferimenti nel piano tecnico di sicurezza.">
+                        Organizza calcoli, evidenze e riferimenti nel piano tecnico di sicurezza.</p>
+                </div>
+                <div class="pipe-step">
+                    <div class="pipe-num">04</div>
+                    <h3 data-en="Your control" data-it="Il tuo controllo">Il tuo controllo</h3>
+                    <p data-en="Highlights assumptions and results. You review, correct and sign."
+                        data-it="Evidenzia ipotesi e risultati. Tu verifichi, correggi e firmi.">
+                        Evidenzia ipotesi e risultati. Tu verifichi, correggi e firmi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 02 — VALIDATION -->
+    <section class="section section-alt" id="method">
+        <div class="container compact-proof">
+            <div class="section-num reveal">02</div>
+            <p class="section-tag reveal" data-en="TESTED ON A REAL SITE" data-it="TESTATO SU UN SITO REALE">TESTATO SU UN SITO REALE</p>
+            <h2 class="reveal flicker-text" data-en="Simulate first.<br>Sign with the numbers."
+                data-it="Prima simuli.<br>Poi firmi con i numeri.">Prima simuli.<br>Poi firmi con i numeri.</h2>
+            <p class="lead reveal"
+                data-en="On the Pordenone case study, IGUDAR's layout was compared with manual placement using the same site and budget."
+                data-it="Nel caso studio di Pordenone, il layout IGUDAR è stato confrontato con il posizionamento manuale sullo stesso sito e con lo stesso budget.">
+                Nel caso studio di Pordenone, il layout IGUDAR è stato confrontato con il posizionamento manuale sullo
+                stesso sito e con lo stesso budget.</p>
+
+            <div class="result-banner reveal">
+                <div class="rb-num" data-en="&minus;39.3%" data-it="&minus;39,3%">&minus;39,3%</div>
+                <div class="rb-body">
+                    <div class="rb-title" data-en="simulated casualties vs manual baseline"
+                        data-it="vittime simulate rispetto al baseline manuale">vittime simulate rispetto al baseline manuale</div>
+                    <p data-en="A measurable result from a specific simulation, not a generic promise."
+                        data-it="Un risultato misurabile ottenuto in una simulazione specifica, non una promessa generica.">
+                        Un risultato misurabile ottenuto in una simulazione specifica, non una promessa generica.</p>
+                </div>
+            </div>
+            <figure class="validation-video reveal" aria-label="Simulazione 3D IGUDAR">
+                <video autoplay muted loop playsinline preload="metadata"
+                    aria-label="Simulazione tridimensionale realizzata con IGUDAR">
+                    <source src="assets/IGUDAR_3D.m4v" type="video/mp4">
+                </video>
+                <button class="validation-expand" type="button" aria-label="Apri il video a schermo intero">
+                    <span data-en="Fullscreen" data-it="Schermo intero">Schermo intero</span>
+                    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                        <path d="M7 3H3v4M13 3h4v4M7 17H3v-4M13 17h4v-4" />
+                    </svg>
+                </button>
+            </figure>
+        </div>
+    </section>
+
+    <!-- 03 — COMPLIANCE -->
+    <section class="section" id="compliance">
+        <div class="container">
+            <div class="section-num reveal">03</div>
+            <p class="section-tag reveal" data-en="TECHNICAL CONTROL" data-it="CONTROLLO TECNICO">CONTROLLO TECNICO</p>
+            <h2 class="reveal" data-en="Rules and constraints,<br>inside the calculation."
+                data-it="Norme e vincoli,<br>dentro il calcolo.">Norme e vincoli,<br>dentro il calcolo.</h2>
+            <p class="lead reveal"
+                data-en="The AI coworker checks the applicable constraints while it builds the analysis, and reports them next to the result."
+                data-it="Il coworker AI verifica i vincoli applicabili mentre costruisce l'analisi e li riporta accanto al risultato.">
+                Il coworker AI verifica i vincoli applicabili mentre costruisce l'analisi e li riporta accanto al
+                risultato.</p>
+
+            <div class="norm-grid reveal">
+                <div class="norm">
+                    <div class="norm-tag" data-en="ACCESS" data-it="ACCESSI">ACCESSI</div>
+                    <h4 data-en="Emergency vehicles" data-it="Mezzi di soccorso">Mezzi di soccorso</h4>
+                    <p data-en="Access and manoeuvring corridors checked on every generated layout."
+                        data-it="Corridoi di accesso e manovra verificati su ogni layout generato.">
+                        Corridoi di accesso e manovra verificati su ogni layout generato.</p>
+                </div>
+                <div class="norm">
+                    <div class="norm-tag" data-en="FIRE" data-it="ANTINCENDIO">ANTINCENDIO</div>
+                    <h4 data-en="Distances and constraints" data-it="Distanze e vincoli">Distanze e vincoli</h4>
+                    <p data-en="Technical constraints reconciled with the proposed layout before the report is produced."
+                        data-it="Vincoli tecnici conciliati con il layout proposto prima di produrre il report.">
+                        Vincoli tecnici conciliati con il layout proposto prima di produrre il report.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta" id="contact">
+        <div class="container cta-content">
+            <h2 class="reveal" data-en="Try IGUDAR<br>on a real site."
+                data-it="Prova IGUDAR<br>su un sito reale.">Prova IGUDAR<br>su un sito reale.</h2>
+            <p class="reveal reveal-delay-1"
+                data-en="Bring us a plan or a real case: we'll show you how the AI coworker builds the digital twin, simulations and safety plan."
+                data-it="Porta una planimetria o un caso reale: ti mostriamo come il coworker AI costruisce digital twin, simulazioni e piano di sicurezza.">
+                Porta una planimetria o un caso reale: ti mostriamo come il coworker AI costruisce digital twin,
+                simulazioni e piano di sicurezza.</p>
+
+            <form class="contact-form reveal reveal-delay-2" id="contactForm" novalidate>
+                <div class="cf-row">
+                    <label class="cf-field">
+                        <span class="cf-label" data-en="Name *" data-it="Nome *">Nome *</span>
+                        <input type="text" name="name" required maxlength="80" autocomplete="name"
+                            data-en-placeholder="Your full name" data-it-placeholder="Nome e cognome"
+                            placeholder="Nome e cognome">
+                    </label>
+                    <label class="cf-field">
+                        <span class="cf-label" data-en="Email *" data-it="Email *">Email *</span>
+                        <input type="email" name="email" required maxlength="120" autocomplete="email"
+                            data-en-placeholder="you@organization.com" data-it-placeholder="tu@organizzazione.it"
+                            placeholder="tu@organizzazione.it">
+                    </label>
+                </div>
+                <div class="cf-row">
+                    <label class="cf-field">
+                        <span class="cf-label" data-en="Organization" data-it="Organizzazione">Organizzazione</span>
+                        <input type="text" name="organization" maxlength="120" autocomplete="organization"
+                            data-en-placeholder="Practice, municipality, company..."
+                            data-it-placeholder="Studio, comune, azienda..." placeholder="Studio, comune, azienda...">
+                    </label>
+                    <label class="cf-field">
+                        <span class="cf-label" data-en="You are *" data-it="Sei *">Sei *</span>
+                        <select name="role" required>
+                            <option value="" data-en="Select..." data-it="Seleziona...">Seleziona...</option>
+                            <option value="practice" data-en="Safety professional"
+                                data-it="Professionista della sicurezza">Professionista della sicurezza</option>
+                            <option value="event" data-en="Event organizer" data-it="Organizzatore eventi">Organizzatore
+                                eventi</option>
+                            <option value="municipality" data-en="Municipality / Public Administration"
+                                data-it="Comune / Pubblica Amministrazione">Comune / Pubblica Amministrazione</option>
+                            <option value="other" data-en="Other" data-it="Altro">Altro</option>
+                        </select>
+                    </label>
+                </div>
+                <label class="cf-field">
+                    <span class="cf-label" data-en="Message *" data-it="Messaggio *">Messaggio *</span>
+                    <textarea name="message" required maxlength="2000" rows="5"
+                        data-en-placeholder="Tell us about the site, the event, the plan you have to produce..."
+                        data-it-placeholder="Raccontaci il sito, l'evento, il piano che devi produrre..."
+                        placeholder="Raccontaci il sito, l'evento, il piano che devi produrre..."></textarea>
+                </label>
+
+                <!-- honeypot anti-spam -->
+                <input type="text" name="_honey" class="cf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <input type="hidden" name="_subject" value="Nuovo contatto da igudar.it">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+
+                <div class="cf-actions">
+                    <button type="submit" class="btn-primary btn-lg" id="cfSubmit">
+                        <span class="cf-btn-label" data-en="Send message" data-it="Invia messaggio">Invia
+                            messaggio</span>
+                        <span class="cf-btn-spinner" aria-hidden="true"></span>
+                        <svg class="cf-btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                            <path
+                                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+                        </svg>
+                    </button>
+                    <p class="cf-privacy"
+                        data-en="By sending you accept our <a href='privacy-policy.html'>privacy policy</a>."
+                        data-it="Inviando accetti la nostra <a href='privacy-policy.html'>privacy policy</a>.">Inviando
+                        accetti la nostra <a href='privacy-policy.html'>privacy policy</a>.</p>
+                </div>
+
+                <div class="cf-feedback cf-success" id="cfSuccess" role="status" aria-live="polite" hidden>
+                    <strong data-en="Message sent." data-it="Messaggio inviato.">Messaggio inviato.</strong>
+                    <span data-en="We'll get back to you within 48 hours." data-it="Ti rispondiamo entro 48 ore.">Ti
+                        rispondiamo entro 48 ore.</span>
+                </div>
+                <div class="cf-feedback cf-error" id="cfError" role="alert" aria-live="assertive" hidden>
+                    <strong data-en="Something went wrong." data-it="Qualcosa è andato storto.">Qualcosa è andato
+                        storto.</strong>
+                    <span data-en="Try again, or write to contact@igudar.it."
+                        data-it="Riprova, o scrivici a contact@igudar.it.">Riprova, o scrivici a
+                        contact@igudar.it.</span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img class="footer-logo-img" src="assets/igudar-logo.svg" alt="IGUDAR — Protecting our cities"
+                    loading="lazy">
+                <div class="footer-sub" data-en="AI coworker for safety plans"
+                    data-it="Coworker AI per i piani di sicurezza">Coworker AI per i piani di sicurezza</div>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy.html" data-en="Privacy Policy" data-it="Privacy Policy">Privacy Policy</a>
+                <a href="cookie-policy.html" data-en="Cookie Policy" data-it="Cookie Policy">Cookie Policy</a>
+                <a href="mailto:contact@igudar.it">contact@igudar.it</a>
+            </div>
+            <div class="footer-copy">&copy; 2026 IGUDAR</div>
+        </div>
+    </footer>
+
+    <!-- STICKY CTA — desktop floating chip + mobile bottom bar -->
+    <a href="#contact" class="sticky-cta" id="stickyCta" aria-label="Richiedi Demo">
+        <span class="sticky-cta-text" data-en="Request a Demo" data-it="Richiedi una Demo">Richiedi una Demo</span>
+        <svg class="sticky-cta-arrow" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+            <path
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" />
+        </svg>
+    </a>
+
+    <script>
+        (function () {
+            // ============================================================
+            // LANGUAGE — apply Italian as default on load
+            // ============================================================
+            var lang = 'it';
+            var btn = document.getElementById('langToggle');
+
+            function applyLang(targetLang) {
+                document.querySelectorAll('[data-' + targetLang + ']').forEach(function (el) {
+                    var val = el.getAttribute('data-' + targetLang);
+                    if (el.tagName === 'OPTION') {
+                        el.textContent = val;
+                    } else if (el.classList.contains('flicker-text') && el.dataset.flickered) {
+                        el.innerHTML = val;
+                        el.dataset.flickered = '';
+                        el.classList.remove('flicker-ready');
+                        splitAndFlicker(el);
+                    } else {
+                        el.innerHTML = val;
+                        // Count-up figures are formatted per locale (80.000 vs
+                        // 80,000). Re-seed the animation source so a language
+                        // switch before the element scrolls into view doesn't
+                        // leave it counting up to the other locale's format.
+                        if (el.hasAttribute('data-original-text')) {
+                            var numNode = findFirstNumberNode(el);
+                            if (numNode) {
+                                el.dataset.originalText = numNode.textContent;
+                                if (!el.dataset.counted) zeroOut(el);
+                            }
+                        }
+                    }
+                });
+                // placeholders (input/textarea)
+                document.querySelectorAll('[data-' + targetLang + '-placeholder]').forEach(function (el) {
+                    el.placeholder = el.getAttribute('data-' + targetLang + '-placeholder');
+                });
+            }
+
+            // Apply initial Italian translation before any other code runs
+            applyLang('it');
+            document.documentElement.lang = 'it';
+
+            // ============================================================
+            // INTRO — random flicker character reveal
+            // ============================================================
+            var titleEl = document.getElementById('introTitle');
+            var dividerEl = document.getElementById('introDivider');
+            var markEl = document.querySelector('.intro-mark');
+            var introVideo = document.querySelector('.intro-video');
+            var letters = 'IGUDAR'.split('');
+
+            // Keep the opening black until the video has a real frame ready.
+            // This avoids flashing a static demo image before playback starts.
+            if (introVideo) {
+                introVideo.muted = true;
+                var revealVideo = function () { introVideo.classList.add('is-ready'); };
+                if (introVideo.readyState >= 2) revealVideo();
+                else introVideo.addEventListener('loadeddata', revealVideo, { once: true });
+                var playback = introVideo.play();
+                if (playback && typeof playback.catch === 'function') playback.catch(function () {});
+            }
+
+            // Mobile validation video: show a useful crop inline and let the
+            // user open the complete ultrawide frame at full screen.
+            var validationVideo = document.querySelector('.validation-video video');
+            var validationExpand = document.querySelector('.validation-expand');
+            if (validationVideo && validationExpand) {
+                validationExpand.addEventListener('click', function () {
+                    if (validationVideo.requestFullscreen) {
+                        validationVideo.requestFullscreen().catch(function () {});
+                    } else if (validationVideo.webkitEnterFullscreen) {
+                        validationVideo.webkitEnterFullscreen();
+                    }
+                });
+            }
+
+            letters.forEach(function (ch) {
+                var span = document.createElement('span');
+                span.className = 'char';
+                span.textContent = ch;
+                titleEl.appendChild(span);
+            });
+
+            var chars = titleEl.querySelectorAll('.char');
+
+            var indices = [];
+            for (var i = 0; i < chars.length; i++) indices.push(i);
+            for (var i = indices.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = indices[i]; indices[i] = indices[j]; indices[j] = tmp;
+            }
+
+            function flickerIn(el) {
+                var steps = [0, 0.7, 0.1, 0.9, 0.15, 1, 0.3, 1, 0.6, 1];
+                var stepMs = 30;
+                var idx = 0;
+                function tick() {
+                    if (idx < steps.length) {
+                        el.style.opacity = steps[idx];
+                        idx++;
+                        setTimeout(tick, stepMs);
+                    } else {
+                        el.style.opacity = 1;
+                    }
+                }
+                tick();
+            }
+
+            var stagger = 80;
+            var startDelay = 500;
+
+            setTimeout(function () {
+                if (markEl) markEl.classList.add('show');
+
+                indices.forEach(function (charIdx, seqIdx) {
+                    setTimeout(function () {
+                        flickerIn(chars[charIdx]);
+                    }, seqIdx * stagger);
+                });
+
+                var afterChars = indices.length * stagger + 300;
+
+                setTimeout(function () { dividerEl.classList.add('show'); }, afterChars);
+            }, startDelay);
+
+            // ============================================================
+            // FLICKER TEXT — scroll-triggered reveal
+            // ============================================================
+            function flickerChar(el) {
+                var steps = [0, 0.7, 0.1, 0.9, 0.15, 1, 0.3, 1, 0.6, 1];
+                var ms = 28;
+                var i = 0;
+                function tick() {
+                    if (i < steps.length) {
+                        el.style.opacity = steps[i];
+                        i++;
+                        setTimeout(tick, ms);
+                    } else {
+                        el.style.opacity = 1;
+                    }
+                }
+                tick();
+            }
+
+            function splitAndFlicker(el) {
+                if (el.dataset.flickered) return;
+                el.dataset.flickered = '1';
+
+                var html = el.innerHTML;
+                var fragments = [];
+                var parts = html.split(/<br\s*\/?>/gi);
+                parts.forEach(function (part, pi) {
+                    var temp = document.createElement('span');
+                    temp.innerHTML = part;
+                    var text = temp.textContent || temp.innerText || '';
+
+                    for (var c = 0; c < text.length; c++) {
+                        if (text[c] === ' ') {
+                            var sp = document.createElement('span');
+                            sp.className = 'ft-space';
+                            sp.innerHTML = ' ';
+                            fragments.push(sp);
+                        } else {
+                            var span = document.createElement('span');
+                            span.className = 'ft-char';
+                            span.textContent = text[c];
+                            fragments.push(span);
+                        }
+                    }
+                    if (pi < parts.length - 1) {
+                        var br = document.createElement('br');
+                        fragments.push(br);
+                    }
+                });
+
+                el.innerHTML = '';
+                fragments.forEach(function (f) { el.appendChild(f); });
+                el.classList.add('flicker-ready');
+
+                var charSpans = el.querySelectorAll('.ft-char');
+                var indices = [];
+                for (var i = 0; i < charSpans.length; i++) indices.push(i);
+                for (var i = indices.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var tmp = indices[i]; indices[i] = indices[j]; indices[j] = tmp;
+                }
+
+                var stagger = Math.max(20, Math.min(50, 1200 / charSpans.length));
+                indices.forEach(function (idx, seq) {
+                    setTimeout(function () {
+                        flickerChar(charSpans[idx]);
+                    }, seq * stagger);
+                });
+            }
+
+            var flickerObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        splitAndFlicker(entry.target);
+                        flickerObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.flicker-text').forEach(function (el) {
+                flickerObserver.observe(el);
+            });
+
+            // ============================================================
+            // LANGUAGE TOGGLE
+            // ============================================================
+            btn.addEventListener('click', function () {
+                lang = lang === 'en' ? 'it' : 'en';
+                btn.textContent = lang === 'en' ? 'IT' : 'EN';
+                document.documentElement.lang = lang;
+                applyLang(lang);
+            });
+
+            // ============================================================
+            // SCROLL REVEAL
+            // ============================================================
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                observer.observe(el);
+            });
+
+            // ============================================================
+            // INTRO ↔ HERO TRANSITION
+            // Fade intro content as the user scrolls so the sticky intro
+            // dissolves into the hero rising up beneath it.
+            // ============================================================
+            var introInnerEl = document.querySelector('.intro-inner');
+            var ticking = false;
+
+            function updateIntroTransition() {
+                if (!introInnerEl) { ticking = false; return; }
+                var sy = window.scrollY || window.pageYOffset || 0;
+                var vh = window.innerHeight;
+                var p = Math.min(1, Math.max(0, sy / (vh * 0.65)));
+                var eased = p * p * (3 - 2 * p); // smoothstep
+                introInnerEl.style.opacity = String(1 - eased);
+                introInnerEl.style.transform = 'translate3d(0,' + (-70 * eased) + 'px,0)';
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateIntroTransition);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // ============================================================
+            // COUNT-UP — numeric stats animate from 0 to their value
+            // when they enter the viewport. Pre-zeroed at init so the
+            // final value never flashes before the animation starts.
+            // ============================================================
+            function findFirstNumberNode(el) {
+                for (var n = 0; n < el.childNodes.length; n++) {
+                    var node = el.childNodes[n];
+                    if (node.nodeType === 3 && /\d/.test(node.textContent)) return node;
+                }
+                return null;
+            }
+
+            // Locale-agnostic: "80.000" and "80,000" are both grouped
+            // thousands, "39,3" and "39.3" are both one decimal. Whichever
+            // separator the text uses is the one we render back.
+            function parseCount(text) {
+                var match = text.match(/^([^\d]*)([\d.,]+)([\s\S]*)$/);
+                if (!match) return null;
+                var raw = match[2];
+                var base = { prefix: match[1], suffix: match[3] };
+
+                if (/^\d{1,3}([.,]\d{3})+$/.test(raw)) {
+                    base.target = parseFloat(raw.replace(/[.,]/g, ''));
+                    base.grouped = true;
+                    base.groupMark = raw.indexOf('.') !== -1 ? '.' : ',';
+                    base.hasDecimal = false;
+                    base.decimals = 0;
+                } else {
+                    var parts = raw.match(/^(\d+)(?:([.,])(\d+))?$/);
+                    if (!parts) return null;
+                    base.target = parseFloat(parts[1] + (parts[2] ? '.' + parts[3] : ''));
+                    base.grouped = false;
+                    base.hasDecimal = !!parts[2];
+                    base.decimalMark = parts[2] || '.';
+                    base.decimals = parts[3] ? parts[3].length : 0;
+                }
+                return isFinite(base.target) ? base : null;
+            }
+
+            function formatCount(val, info) {
+                if (info.hasDecimal) {
+                    return val.toFixed(info.decimals).replace('.', info.decimalMark);
+                }
+                var out = Math.floor(val).toString();
+                if (info.grouped) out = out.replace(/\B(?=(\d{3})+(?!\d))/g, info.groupMark);
+                return out;
+            }
+
+            // Show "0" immediately so the real value never flashes before the
+            // element scrolls into view and the animation takes over.
+            function zeroOut(el) {
+                var node = findFirstNumberNode(el);
+                if (!node) return;
+                var info = parseCount(el.dataset.originalText || node.textContent);
+                if (!info) return;
+                node.textContent = info.prefix + formatCount(0, info) + info.suffix;
+            }
+
+            function startCountUp(el) {
+                if (el.dataset.counted) return;
+                el.dataset.counted = '1';
+                var node = findFirstNumberNode(el);
+                if (!node) return;
+                var original = el.dataset.originalText || node.textContent;
+                var info = parseCount(original);
+                if (!info) return;
+                if (info.target === 0) {
+                    node.textContent = original;
+                    return;
+                }
+
+                var duration = info.target >= 50 ? 750 : 550;
+                var start = null;
+
+                function tick(ts) {
+                    if (start === null) start = ts;
+                    var elapsed = ts - start;
+                    var progress = Math.min(1, elapsed / duration);
+                    var val = info.target * progress;
+                    node.textContent = info.prefix + formatCount(val, info) + info.suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(tick);
+                    } else {
+                        node.textContent = original;
+                    }
+                }
+                requestAnimationFrame(tick);
+            }
+
+            var countObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        startCountUp(entry.target);
+                        countObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.45, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.stat-num, .fs-num, .rb-num, .output-kpi-num').forEach(function (el) {
+                var node = findFirstNumberNode(el);
+                if (!node || !parseCount(node.textContent)) return;
+                el.dataset.originalText = node.textContent;
+                zeroOut(el);
+                countObserver.observe(el);
+            });
+
+            // ============================================================
+            // STICKY CTA — always visible
+            // ============================================================
+            document.body.classList.add('has-sticky-cta');
+
+            // ============================================================
+            // CONTACT FORM — AJAX submit via FormSubmit (no redirect)
+            // ============================================================
+            var form = document.getElementById('contactForm');
+            if (form) {
+                var successBox = document.getElementById('cfSuccess');
+                var errorBox = document.getElementById('cfError');
+                var submitBtn = document.getElementById('cfSubmit');
+                var endpoint = 'https://formsubmit.co/ajax/contact@igudar.it';
+
+                form.addEventListener('submit', function (ev) {
+                    ev.preventDefault();
+                    successBox.hidden = true;
+                    errorBox.hidden = true;
+                    form.classList.add('cf-submitted');
+
+                    // honeypot — silent abort if filled
+                    if (form.querySelector('input[name="_honey"]').value) {
+                        return;
+                    }
+
+                    if (!form.checkValidity()) {
+                        var firstInvalid = form.querySelector(':invalid');
+                        if (firstInvalid && typeof firstInvalid.focus === 'function') firstInvalid.focus();
+                        return;
+                    }
+
+                    form.classList.add('cf-loading');
+                    submitBtn.disabled = true;
+
+                    var data = {
+                        name: form.name.value.trim(),
+                        email: form.email.value.trim(),
+                        organization: form.organization.value.trim(),
+                        role: form.role.value,
+                        message: form.message.value.trim(),
+                        _subject: form.querySelector('[name="_subject"]').value,
+                        _captcha: 'false',
+                        _template: 'table'
+                    };
+
+                    fetch(endpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify(data)
+                    }).then(function (res) {
+                        if (!res.ok) throw new Error('http ' + res.status);
+                        return res.json();
+                    }).then(function (json) {
+                        if (json && (json.success === 'true' || json.success === true)) {
+                            form.classList.remove('cf-loading');
+                            form.classList.add('cf-sent');
+                            successBox.hidden = false;
+                            form.reset();
+                        } else {
+                            throw new Error(json && json.message ? json.message : 'unknown');
+                        }
+                    }).catch(function () {
+                        form.classList.remove('cf-loading');
+                        submitBtn.disabled = false;
+                        errorBox.hidden = false;
+                    });
+                });
+            }
+        })();
+    </script>
+
+</body>
+
+</html>

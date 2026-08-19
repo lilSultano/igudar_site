@@ -1,0 +1,17 @@
+{
+  "name": "IGUDAR Risk Intelligence",
+  "short_name": "IGUDAR",
+  "description": "Risk intelligence per la sicurezza degli spazi pubblici.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E1114",
+  "theme_color": "#0E1114",
+  "icons": [
+    {
+      "src": "/assets/logo-search.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
