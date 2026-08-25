@@ -952,6 +952,25 @@ then releases when
     pointer-events: none;
 }
 
+.cf-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-3);
+    cursor: pointer;
+}
+
+.cf-consent input[type="checkbox"] {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    accent-color: var(--brand-2);
+    cursor: pointer;
+}
+
 .cf-actions {
     display: flex;
     flex-direction: column;
@@ -1043,7 +1062,8 @@ then releases when
 
 .contact-form.cf-sent .cf-row,
 .contact-form.cf-sent > .cf-field,
-.contact-form.cf-sent .cf-actions { display: none; }
+.contact-form.cf-sent .cf-actions,
+.contact-form.cf-sent .cf-consent { display: none; }
 
 @media (max-width: 700px) {
     .cf-row { grid-template-columns: 1fr; gap: 16px; }

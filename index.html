@@ -84,11 +84,58 @@
     }
     </script>
 
+    <meta name="google-site-verification" content="zh7QQQUIysWlUWr3wLWdwLgmASu2Fu3GaXY28Cti364" />
+
+    <!-- Google Consent Mode + Google Tag Manager -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'denied',
+            personalization_storage: 'denied',
+            security_storage: 'denied',
+            wait_for_update: 2000
+        });
+
+        gtag('set', 'url_passthrough', true);
+        gtag('set', 'ads_data_redaction', true);
+
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+
+            var f = d.getElementsByTagName(s)[0];
+            var j = d.createElement(s);
+            var dl = l !== 'dataLayer' ? '&l=' + l : '';
+
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WLKWSDM5');
+    </script>
+
     <!-- Avacy Cookie Consent -->
-    <script id='oil-configuration' type='application/configuration'
-        data-remote-config='https://igudar.avacy-cdn.com/config/igudar/4125e2e5-4762-4b36-a372-154ff3115007/banner.json'></script>
-    <script src='https://igudar.avacy-cdn.com/current/dist/oilstub.min.js'></script>
-    <script src='https://igudar.avacy-cdn.com/current/dist/oil.min.js'></script>
+    <script
+        id="oil-configuration"
+        type="application/configuration"
+        data-remote-config="https://igudar.avacy-cdn.com/config/igudar/4125e2e5-4762-4b36-a372-154ff3115007/banner.json">
+    </script>
+
+    <script src="https://igudar.avacy-cdn.com/current/dist/oilstub.min.js"></script>
+    <script src="https://igudar.avacy-cdn.com/current/dist/oil.min.js"></script>
 </head>
 
 <body>
@@ -283,16 +330,30 @@
             <form class="contact-form reveal reveal-delay-2" id="contactForm" novalidate>
                 <div class="cf-row">
                     <label class="cf-field">
-                        <span class="cf-label" data-en="Name *" data-it="Nome *">Nome *</span>
-                        <input type="text" name="name" required maxlength="80" autocomplete="name"
-                            data-en-placeholder="Your full name" data-it-placeholder="Nome e cognome"
-                            placeholder="Nome e cognome">
+                        <span class="cf-label" data-en="First name *" data-it="Nome *">Nome *</span>
+                        <input type="text" name="firstname" required maxlength="80" autocomplete="given-name"
+                            data-en-placeholder="Your first name" data-it-placeholder="Il tuo nome"
+                            placeholder="Il tuo nome">
                     </label>
+                    <label class="cf-field">
+                        <span class="cf-label" data-en="Last name *" data-it="Cognome *">Cognome *</span>
+                        <input type="text" name="lastname" required maxlength="80" autocomplete="family-name"
+                            data-en-placeholder="Your last name" data-it-placeholder="Il tuo cognome"
+                            placeholder="Il tuo cognome">
+                    </label>
+                </div>
+                <div class="cf-row">
                     <label class="cf-field">
                         <span class="cf-label" data-en="Email *" data-it="Email *">Email *</span>
                         <input type="email" name="email" required maxlength="120" autocomplete="email"
                             data-en-placeholder="you@organization.com" data-it-placeholder="tu@organizzazione.it"
                             placeholder="tu@organizzazione.it">
+                    </label>
+                    <label class="cf-field">
+                        <span class="cf-label" data-en="Phone" data-it="Telefono">Telefono</span>
+                        <input type="tel" name="phone" maxlength="30" autocomplete="tel"
+                            data-en-placeholder="+39 333 000 0000" data-it-placeholder="+39 333 000 0000"
+                            placeholder="+39 333 000 0000">
                     </label>
                 </div>
                 <div class="cf-row">
@@ -304,15 +365,19 @@
                     </label>
                     <label class="cf-field">
                         <span class="cf-label" data-en="You are *" data-it="Sei *">Sei *</span>
+                        <!-- i value devono restare identici alle opzioni della property "sei" su HubSpot -->
                         <select name="role" required>
                             <option value="" data-en="Select..." data-it="Seleziona...">Seleziona...</option>
-                            <option value="practice" data-en="Safety professional"
+                            <option value="Professionista della sicurezza" data-en="Safety professional"
                                 data-it="Professionista della sicurezza">Professionista della sicurezza</option>
-                            <option value="event" data-en="Event organizer" data-it="Organizzatore eventi">Organizzatore
-                                eventi</option>
-                            <option value="municipality" data-en="Municipality / Public Administration"
+                            <option value="Organizzatore eventi" data-en="Event organizer"
+                                data-it="Organizzatore eventi">Organizzatore eventi</option>
+                            <option value="Studio tecnico / geometra" data-en="Technical practice / surveyor"
+                                data-it="Studio tecnico / geometra">Studio tecnico / geometra</option>
+                            <option value="Comune / Pubblica Amministrazione"
+                                data-en="Municipality / Public Administration"
                                 data-it="Comune / Pubblica Amministrazione">Comune / Pubblica Amministrazione</option>
-                            <option value="other" data-en="Other" data-it="Altro">Altro</option>
+                            <option value="Altro" data-en="Other" data-it="Altro">Altro</option>
                         </select>
                     </label>
                 </div>
@@ -324,11 +389,15 @@
                         placeholder="Raccontaci il sito, l'evento, il piano che devi produrre..."></textarea>
                 </label>
 
+                <label class="cf-consent">
+                    <input type="checkbox" name="consent" value="yes">
+                    <span data-en="I agree to receive other communications from IGUDAR."
+                        data-it="Accetto di ricevere altre comunicazioni da IGUDAR.">Accetto di ricevere altre
+                        comunicazioni da IGUDAR.</span>
+                </label>
+
                 <!-- honeypot anti-spam -->
                 <input type="text" name="_honey" class="cf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-                <input type="hidden" name="_subject" value="Nuovo contatto da igudar.it">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
 
                 <div class="cf-actions">
                     <button type="submit" class="btn-primary btn-lg" id="cfSubmit">
@@ -348,8 +417,6 @@
 
                 <div class="cf-feedback cf-success" id="cfSuccess" role="status" aria-live="polite" hidden>
                     <strong data-en="Message sent." data-it="Messaggio inviato.">Messaggio inviato.</strong>
-                    <span data-en="We'll get back to you within 48 hours." data-it="Ti rispondiamo entro 48 ore.">Ti
-                        rispondiamo entro 48 ore.</span>
                 </div>
                 <div class="cf-feedback cf-error" id="cfError" role="alert" aria-live="assertive" hidden>
                     <strong data-en="Something went wrong." data-it="Qualcosa è andato storto.">Qualcosa è andato
@@ -762,14 +829,85 @@
             document.body.classList.add('has-sticky-cta');
 
             // ============================================================
-            // CONTACT FORM — AJAX submit via FormSubmit (no redirect)
+            // CONTACT FORM — invio a HubSpot (CRM)
             // ============================================================
             var form = document.getElementById('contactForm');
             if (form) {
                 var successBox = document.getElementById('cfSuccess');
                 var errorBox = document.getElementById('cfError');
                 var submitBtn = document.getElementById('cfSubmit');
-                var endpoint = 'https://formsubmit.co/ajax/contact@igudar.it';
+
+                // HubSpot — form "Richiedi Demo", portale EU (hublet eu1)
+                var HS_PORTAL_ID = '149175563';
+                var HS_FORM_ID = '0ce6ea17-ca82-4e4e-a0c9-7c7104b44bf8';
+                var HS_ENDPOINT = 'https://api-eu1.hsforms.com/submissions/v3/integration/submit/' +
+                    HS_PORTAL_ID + '/' + HS_FORM_ID;
+                function fieldValue(name) {
+                    var el = form.elements[name];
+                    return el && el.value ? el.value.trim() : '';
+                }
+
+                function readCookie(name) {
+                    // document.cookie puo' lanciare se i cookie sono bloccati dal browser
+                    try {
+                        var match = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'));
+                        return match ? decodeURIComponent(match[2]) : '';
+                    } catch (err) {
+                        return '';
+                    }
+                }
+
+                function submitToHubSpot(values) {
+                    // "Organizzazione" non esiste come campo sul form HubSpot:
+                    // finche' non viene aggiunto lo accodiamo al messaggio per non perderlo.
+                    var message = values.organization ?
+                        'Organizzazione: ' + values.organization + '\n\n' + values.message :
+                        values.message;
+
+                    var fields = [
+                        { objectTypeId: '0-1', name: 'firstname', value: values.firstname },
+                        { objectTypeId: '0-1', name: 'lastname', value: values.lastname },
+                        { objectTypeId: '0-1', name: 'email', value: values.email },
+                        { objectTypeId: '0-1', name: 'sei', value: values.role },
+                        { objectTypeId: '0-1', name: 'message', value: message }
+                    ];
+                    if (values.phone) {
+                        fields.push({ objectTypeId: '0-1', name: 'phone', value: values.phone });
+                    }
+
+                    var context = {
+                        pageUri: window.location.href,
+                        pageName: document.title
+                    };
+
+                    // GDPR — la subscription id corrisponde alla checkbox di consenso del form HubSpot
+                    var legalConsentOptions = {
+                        consent: {
+                            consentToProcess: true,
+                            text: 'Per fornirti il servizio, abbiamo bisogno del tuo consenso per archiviare e trattare i tuoi dati personali.',
+                            communications: [{
+                                value: values.consent,
+                                subscriptionTypeId: 3456756631,
+                                text: 'Accetto di ricevere altre comunicazioni da IGUDAR.'
+                            }]
+                        }
+                    };
+                    var hutk = readCookie('hubspotutk');
+                    if (hutk) context.hutk = hutk;
+
+                    return fetch(HS_ENDPOINT, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            fields: fields,
+                            context: context,
+                            legalConsentOptions: legalConsentOptions
+                        })
+                    }).then(function (res) {
+                        if (!res.ok) throw new Error('hubspot ' + res.status);
+                        return true;
+                    });
+                }
 
                 form.addEventListener('submit', function (ev) {
                     ev.preventDefault();
@@ -791,33 +929,25 @@
                     form.classList.add('cf-loading');
                     submitBtn.disabled = true;
 
-                    var data = {
-                        name: form.name.value.trim(),
-                        email: form.email.value.trim(),
-                        organization: form.organization.value.trim(),
-                        role: form.role.value,
-                        message: form.message.value.trim(),
-                        _subject: form.querySelector('[name="_subject"]').value,
-                        _captcha: 'false',
-                        _template: 'table'
+                    var values = {
+                        firstname: fieldValue('firstname'),
+                        lastname: fieldValue('lastname'),
+                        email: fieldValue('email'),
+                        phone: fieldValue('phone'),
+                        organization: fieldValue('organization'),
+                        role: fieldValue('role'),
+                        message: fieldValue('message'),
+                        consent: !!(form.elements['consent'] && form.elements['consent'].checked)
                     };
 
-                    fetch(endpoint, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                        body: JSON.stringify(data)
-                    }).then(function (res) {
-                        if (!res.ok) throw new Error('http ' + res.status);
-                        return res.json();
-                    }).then(function (json) {
-                        if (json && (json.success === 'true' || json.success === true)) {
-                            form.classList.remove('cf-loading');
-                            form.classList.add('cf-sent');
-                            successBox.hidden = false;
-                            form.reset();
-                        } else {
-                            throw new Error(json && json.message ? json.message : 'unknown');
-                        }
+                    // Promise.resolve().then(...) cattura anche gli errori sincroni
+                    Promise.resolve().then(function () {
+                        return submitToHubSpot(values);
+                    }).then(function () {
+                        form.classList.remove('cf-loading');
+                        form.classList.add('cf-sent');
+                        successBox.hidden = false;
+                        form.reset();
                     }).catch(function () {
                         form.classList.remove('cf-loading');
                         submitBtn.disabled = false;
