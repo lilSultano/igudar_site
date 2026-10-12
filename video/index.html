@@ -467,8 +467,8 @@
                     playBtn.hidden = false;
                 });
             }
-            // arrivo dalla home (ha appena cliccato "Guarda"): proviamo subito con l'audio,
-            // se il browser lo blocca (es. Safari iOS) si torna all'autoplay muto
+            // Si prova sempre a partire con l'audio. I browser (Safari, Chrome, app di LinkedIn e
+            // Instagram) lo bloccano finché l'utente non tocca la pagina: in quel caso si parte muti.
             function autoplayWithSound() {
                 v.muted = false;
                 var p = v.play();
@@ -483,13 +483,22 @@
                     autoplay();
                 });
             }
-            var fromSite = document.referrer.indexOf(location.origin + '/') === 0;
             if (reduceMotion) {
                 playBtn.hidden = false;
             } else {
                 v.preload = 'auto';
-                if (fromSite) autoplayWithSound(); else autoplay();
+                autoplayWithSound();
             }
+
+            // Partito muto: il primo tocco in un punto qualsiasi della pagina (non su link, bottoni
+            // o campi del form) accende l'audio, purché il video sia ancora per metà a schermo.
+            document.addEventListener('click', function (e) {
+                if (engaged || unmuteBtn.hidden) return;
+                if (e.target.closest && e.target.closest('a, button, input, select, textarea, label')) return;
+                var r = v.getBoundingClientRect();
+                var visible = Math.min(r.bottom, window.innerHeight) - Math.max(r.top, 0);
+                if (visible > r.height / 2) engage(true);
+            }, true);
 
             v.addEventListener('playing', function once() {
                 v.removeEventListener('playing', once);
