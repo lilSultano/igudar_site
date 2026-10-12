@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
         <loc>https://igudar.it/</loc>
-        <lastmod>2026-08-19</lastmod>
+        <lastmod>2026-09-26</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://igudar.it/video/</loc>
+        <lastmod>2026-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <video:video>
+            <video:thumbnail_loc>https://igudar.it/assets/og-video.jpg</video:thumbnail_loc>
+            <video:title>IGUDAR in 3 minuti</video:title>
+            <video:description>Il team di IGUDAR mostra come si parte dall’indirizzo di un evento, si ricostruisce il sito in 3D, si simulano i veicoli che cercano di entrare e si decide dove mettere le barriere.</video:description>
+            <video:content_loc>https://igudar.it/assets/igudar-video-1080.mp4</video:content_loc>
+            <video:duration>180</video:duration>
+            <video:publication_date>2026-10-12</video:publication_date>
+        </video:video>
     </url>
     <url>
         <loc>https://igudar.it/privacy-policy.html</loc>

@@ -1,6 +1,6 @@
 # IGUDAR
 
-> IGUDAR è il coworker AI per i piani di sicurezza. Crea il digital twin del sito, simula gli scenari e aiuta il professionista a scrivere il piano; il professionista controlla, corregge e firma.
+> IGUDAR is an AI coworker for event safety and security plans. It builds a 3D digital twin of the site, simulates vehicle risk and helps the professional draft the plan; the appointed professional reviews and signs it.
 
 Canonical website: https://igudar.it/
 Contact: contact@igudar.it
@@ -11,13 +11,13 @@ Status: active development and 2026 pilot programmes
 ## What IGUDAR does
 
 - Builds a measurable digital twin of the real site from surveys and plans.
-- Simulates vehicle paths, impacts, egress and operational constraints before the event.
-- Organizes calculations, evidence and references into the technical safety plan.
+- Simulates vehicle paths and impacts to compare protection layouts before the event.
+- Collects calculations, simulation results and references into a draft safety plan.
 - Highlights assumptions and results so the qualified professional can review, correct and sign.
 
 ## Platform modules
 
-1. Anti-vehicle risk: core module, validated on a real case study.
+1. Vehicle risk: available; validated on the Pordenone case study.
 2. Egress: in development.
 3. Capacity: in development.
 4. Emergency access: in development.
@@ -29,15 +29,23 @@ Status: active development and 2026 pilot programmes
 - IGUDAR does not replace the qualified professional.
 - AI coordinates the analysis but does not invent physical results.
 - Final validity depends on input data, applicable rules and professional review.
-- Operational delivery target: 48 hours after a complete brief and required site data.
-- Internal case study: Piazzale XX Settembre, Pordenone; the IGUDAR configuration recorded 39.3% fewer simulated casualties than the manual baseline in that specific scenario. This result is not a generalized guarantee.
+- Internal case study: Piazzale XX Settembre, Pordenone. Compared with manual placement on the same site and with the same budget, the IGUDAR protection layout recorded 39.3% fewer simulated casualties in that specific scenario. This result is not a general guarantee.
 
 ## Intended users
 
-- Professionisti e tecnici della sicurezza.
+- Safety professionals and technical practices.
+- Event organisers.
+- Public administrations.
+
+## Scope
+
+IGUDAR supports event safety and security planning; it is not a ticketing or invitation-management platform. Module availability must be distinguished from the development roadmap.
 
 ## Main sources
 
 - Homepage and product facts: https://igudar.it/
+- How it works: https://igudar.it/#platform
+- Case study and module status: https://igudar.it/#method
+- Frequently asked questions: https://igudar.it/#faq
 - Privacy policy: https://igudar.it/privacy-policy.html
 - Cookie policy: https://igudar.it/cookie-policy.html

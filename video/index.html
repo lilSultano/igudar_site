@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>IGUDAR in 3 minuti | Video</title>
+    <meta name="description"
+        content="Nel video il team di IGUDAR mostra come si parte dall’indirizzo di un evento, si ricostruisce il sito in 3D, si simulano i veicoli che cercano di entrare e si decide dove mettere le barriere.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-video-preview:-1">
+    <meta name="theme-color" content="#0e1114">
+    <meta name="color-scheme" content="dark">
+    <link rel="canonical" href="https://igudar.it/video/">
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/logo-search.png">
+
+    <!-- Open Graph: anteprima su LinkedIn, Instagram, WhatsApp -->
+    <meta property="og:type" content="video.other">
+    <meta property="og:site_name" content="IGUDAR">
+    <meta property="og:title" content="IGUDAR in 3 minuti">
+    <meta property="og:description"
+        content="Dall’indirizzo dell’evento al modello 3D del sito, alla simulazione dei veicoli e alle barriere: come funziona IGUDAR.">
+    <meta property="og:url" content="https://igudar.it/video/">
+    <meta property="og:image" content="https://igudar.it/assets/og-video.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:image:alt" content="Mehdi Zahid, co-founder di IGUDAR, in piazza davanti alle sedie di un evento">
+    <meta property="og:video" content="https://igudar.it/assets/igudar-video-720.mp4">
+    <meta property="og:video:secure_url" content="https://igudar.it/assets/igudar-video-720.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720">
+    <meta property="og:locale" content="it_IT">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IGUDAR in 3 minuti">
+    <meta name="twitter:description"
+        content="Dall’indirizzo dell’evento al modello 3D del sito, alla simulazione dei veicoli e alle barriere: come funziona IGUDAR.">
+    <meta name="twitter:image" content="https://igudar.it/assets/og-video.jpg">
+
+    <!-- Il poster è l'LCP: lo chiediamo subito -->
+    <link rel="preload" as="image" href="/assets/igudar-video-poster.webp" type="image/webp" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- font non bloccante: la pagina si disegna subito col font di sistema -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+        media="print" onload="this.media='all'">
+
+    <style>
+        :root {
+            --bg: #0e1114;
+            --surface: #17202a;
+            --surface-2: #212b35;
+            --border: #333d47;
+            --text: #fff;
+            --text-2: #c9c8c3;
+            --text-3: #8f918f;
+            --brand: #4d6f8b;
+            --brand-2: #f2efe7;
+            --red: #f25d5d;
+            --ok: #5ba37e;
+            --font: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --pad: 16px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+        body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.55 var(--font); -webkit-font-smoothing: antialiased; }
+        a { color: inherit; }
+        button, input, select, textarea { font: inherit; color: inherit; }
+        :focus-visible { outline: 2px solid var(--brand-2); outline-offset: 3px; }
+        .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+        .wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 var(--pad); }
+
+        /* header */
+        .top { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+        .logo { display: inline-flex; align-items: center; gap: 9px; text-decoration: none; font-weight: 600; letter-spacing: .06em; font-size: 15px; }
+        .logo svg { width: 26px; height: 24px; }
+        .top-cta { font-size: 14px; color: var(--text-2); text-decoration: none; padding: 8px 0; }
+        .top-cta:hover { color: var(--text); }
+
+        /* player */
+        .stage { max-width: 1120px; margin: 0 auto; }
+        .player { position: relative; aspect-ratio: 16 / 9; background: #000 url(/assets/igudar-video-poster.webp) center / cover no-repeat; overflow: hidden; }
+        .player video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: transparent; }
+        .layer { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border: 0; padding: 0; margin: 0; background: transparent; cursor: pointer; }
+        .layer[hidden] { display: none; }
+        .unmute { align-items: flex-end; justify-content: flex-start; padding: 12px; }
+        .pill { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px 9px 11px; border-radius: 999px; background: rgba(14, 17, 20, .78); border: 1px solid rgba(255, 255, 255, .22); font-size: 14px; font-weight: 500; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+        .pill svg { width: 20px; height: 20px; flex: none; }
+        .unmute .pill { animation: nudge 2.4s ease-in-out 1.2s 3; }
+        @keyframes nudge { 0%, 100% { transform: none; } 50% { transform: scale(1.06); } }
+        .bigplay { background: rgba(0, 0, 0, .25); }
+        .bigplay .disc { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 50%; background: rgba(14, 17, 20, .72); border: 2px solid rgba(255, 255, 255, .9); }
+        .bigplay .disc svg { width: 28px; height: 28px; margin-left: 4px; }
+        .bigplay .len { position: absolute; right: 12px; bottom: 12px; font-size: 13px; padding: 4px 9px; border-radius: 6px; background: rgba(14, 17, 20, .75); }
+        .endcard { flex-direction: column; gap: 14px; background: rgba(14, 17, 20, .86); cursor: default; text-align: center; padding: var(--pad); }
+        .endcard p { margin: 0; font-size: 17px; font-weight: 500; max-width: 30ch; }
+        .endcard .row { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        @media (max-width: 479px) {
+            .endcard { gap: 10px; }
+            .endcard p { font-size: 15px; }
+            .endcard .btn { min-height: 42px; padding: 9px 18px; font-size: 15px; }
+        }
+
+        /* buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 12px 22px; border-radius: 999px; border: 1px solid transparent; font-weight: 600; font-size: 16px; text-decoration: none; cursor: pointer; transition: background-color .15s, opacity .15s; }
+        .btn-main { background: #fff; color: var(--bg); }
+        .btn-main:hover { background: #f2efe7; }
+        .btn-ghost { background: transparent; border-color: rgba(255, 255, 255, .35); color: #fff; }
+        .btn-ghost:hover { border-color: #fff; }
+
+        /* intro under the video */
+        .intro { display: grid; gap: 28px; padding-top: 22px; padding-bottom: 40px; }
+        h1 { margin: 0 0 10px; font-size: clamp(26px, 6.4vw, 40px); line-height: 1.12; font-weight: 600; letter-spacing: -.01em; }
+        .lead { margin: 0 0 20px; color: var(--text-2); font-size: 17px; max-width: 58ch; }
+        .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+        .actions .btn-main { flex: 1 1 auto; max-width: 320px; }
+        .link { color: var(--text-2); font-size: 15px; text-underline-offset: 4px; }
+        .link:hover { color: #fff; }
+        .status { margin: 22px 0 0; padding-top: 16px; border-top: 1px solid var(--border); color: var(--text-3); font-size: 14px; max-width: 58ch; }
+
+        /* chapters */
+        .chapters h2 { margin: 0 0 8px; font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); }
+        .chapters ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+        .chapters li { border-bottom: 1px solid var(--border); }
+        .chapter { display: flex; width: 100%; gap: 14px; align-items: baseline; padding: 12px 4px; border: 0; background: none; text-align: left; cursor: pointer; font-size: 15px; color: var(--text-2); }
+        .chapter time { flex: none; width: 3.2em; font-variant-numeric: tabular-nums; color: var(--text-3); font-size: 14px; }
+        .chapter:hover, .chapter[aria-current="true"] { color: #fff; }
+        .chapter[aria-current="true"] time { color: var(--brand-2); }
+
+        /* form */
+        .demo { background: var(--surface); border-top: 1px solid var(--border); padding: 48px 0 56px; scroll-margin-top: 0; }
+        .demo h2 { margin: 0 0 8px; font-size: clamp(24px, 5.6vw, 32px); line-height: 1.15; font-weight: 600; }
+        .demo .lead { margin-bottom: 26px; }
+        form { display: grid; gap: 14px; max-width: 640px; }
+        .row2 { display: grid; gap: 14px; }
+        label.f { display: grid; gap: 6px; font-size: 14px; color: var(--text-2); }
+        input[type=text], input[type=email], select, textarea { width: 100%; min-height: 48px; padding: 11px 13px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); color: #fff; font-size: 16px; }
+        textarea { min-height: 96px; resize: vertical; }
+        select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23c9c8c3' stroke-width='1.6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 12px; padding-right: 36px; }
+        input::placeholder, textarea::placeholder { color: #6f7376; }
+        input:focus, select:focus, textarea:focus { outline: none; border-color: var(--brand-2); }
+        .sent input:invalid, .sent select:invalid, .sent textarea:invalid { border-color: var(--red); }
+        .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--text-2); cursor: pointer; }
+        .consent input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--brand); flex: none; }
+        .honey { position: absolute; left: -9999px; }
+        .fine { margin: 0; font-size: 13px; color: var(--text-3); }
+        .msg { margin: 0; padding: 12px 14px; border-radius: 10px; font-size: 15px; }
+        .msg[hidden] { display: none; }
+        .msg-ok { background: rgba(91, 163, 126, .14); border: 1px solid rgba(91, 163, 126, .5); }
+        .msg-err { background: rgba(242, 93, 93, .12); border: 1px solid rgba(242, 93, 93, .5); }
+        .loading .btn-main { opacity: .6; pointer-events: none; }
+
+        footer { padding: 26px 0 calc(80px + env(safe-area-inset-bottom)); color: var(--text-3); font-size: 13px; }
+        footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+        footer a { text-decoration: none; }
+        footer a:hover { color: #fff; }
+
+        @media (min-width: 720px) {
+            /* su computer il video riempie la prima schermata; la CTA sta nell'intestazione */
+            :root { --pad: 28px; --stage: min(1600px, max(720px, calc((100vh - 92px) * 16 / 9 + 56px))); }
+            .wrap, .stage { max-width: var(--stage); }
+            .stage { padding: 0 var(--pad); }
+            .top { height: 68px; }
+            .top-cta { padding: 10px 20px; border-radius: 999px; background: #fff; color: var(--bg); font-size: 15px; font-weight: 600; }
+            .top-cta:hover { background: #f2efe7; color: var(--bg); }
+            .player { border-radius: 14px; }
+            .row2 { grid-template-columns: 1fr 1fr; }
+            .demo { padding: 72px 0 80px; }
+            footer { padding-bottom: 32px; }
+        }
+        @media (min-width: 960px) {
+            .intro { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 56px; padding-top: 32px; padding-bottom: 64px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .unmute .pill { animation: none; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://igudar.it/video/#video",
+  "name": "IGUDAR in 3 minuti",
+  "description": "Il team di IGUDAR mostra come si parte dall’indirizzo di un evento, si ricostruisce il sito in 3D, si simulano i veicoli che cercano di entrare e si decide quante barriere servono, di che classe e dove.",
+  "thumbnailUrl": ["https://igudar.it/assets/og-video.jpg", "https://igudar.it/assets/igudar-video-poster.webp"],
+  "uploadDate": "2026-10-12",
+  "duration": "PT3M",
+  "contentUrl": "https://igudar.it/assets/igudar-video-1080.mp4",
+  "embedUrl": "https://igudar.it/video/",
+  "inLanguage": "it-IT",
+  "publisher": {
+    "@type": "Organization",
+    "name": "IGUDAR",
+    "url": "https://igudar.it/",
+    "logo": { "@type": "ImageObject", "url": "https://igudar.it/assets/logo-search.png", "width": 512, "height": 512 }
+  },
+  "hasPart": [
+    { "@type": "Clip", "name": "Il problema", "startOffset": 0, "endOffset": 44, "url": "https://igudar.it/video/?t=0" },
+    { "@type": "Clip", "name": "Cos’è IGUDAR", "startOffset": 44, "endOffset": 62, "url": "https://igudar.it/video/?t=44" },
+    { "@type": "Clip", "name": "Dall’indirizzo al modello 3D del sito", "startOffset": 62, "endOffset": 74, "url": "https://igudar.it/video/?t=62" },
+    { "@type": "Clip", "name": "La simulazione dei veicoli", "startOffset": 74, "endOffset": 95, "url": "https://igudar.it/video/?t=74" },
+    { "@type": "Clip", "name": "Barriere: quante, di che classe, dove", "startOffset": 95, "endOffset": 127, "url": "https://igudar.it/video/?t=95" },
+    { "@type": "Clip", "name": "Tavole CAD e relazione tecnica", "startOffset": 127, "endOffset": 139, "url": "https://igudar.it/video/?t=127" },
+    { "@type": "Clip", "name": "Cosa cambia per uno studio tecnico", "startOffset": 139, "endOffset": 180, "url": "https://igudar.it/video/?t=139" }
+  ]
+}
+    </script>
+
+    <!-- Google Consent Mode + Google Tag Manager (come in index.html) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'denied',
+            personalization_storage: 'denied',
+            security_storage: 'denied',
+            wait_for_update: 2000
+        });
+        gtag('set', 'url_passthrough', true);
+        gtag('set', 'ads_data_redaction', true);
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0];
+            var j = d.createElement(s);
+            var dl = l !== 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WLKWSDM5');
+    </script>
+
+    <!-- Avacy Cookie Consent: defer, così non blocca il primo frame del video -->
+    <script id="oil-configuration" type="application/configuration"
+        data-remote-config="https://igudar.avacy-cdn.com/config/igudar/4125e2e5-4762-4b36-a372-154ff3115007/banner.json">
+    </script>
+    <script src="https://igudar.avacy-cdn.com/current/dist/oilstub.min.js" defer></script>
+    <script src="https://igudar.avacy-cdn.com/current/dist/oil.min.js" defer></script>
+</head>
+
+<body>
+    <header class="wrap top">
+        <a class="logo" href="/" aria-label="IGUDAR, vai al sito">
+            <svg viewBox="0 0 424 394" aria-hidden="true">
+                <path d="M6.00622 278.193C5.83327 284.192 9.27803 289.722 14.7783 292.275L93.3494 328.739C103.241 333.329 114.671 326.475 115.108 315.69L120.862 173.868C121.172 166.233 115.652 159.575 108.011 158.368L27.0916 145.592C17.9845 144.154 9.67423 150.954 9.41177 160.059L6.00622 278.193Z" fill="#FFFFFF"/>
+                <path d="M126.915 24.6889C127.263 16.1277 120.329 9 111.653 9H28.6124C20.3457 9 13.5792 15.495 13.344 23.6557L10.9514 106.649C10.7287 114.377 16.4585 121.021 24.2198 122.033L105.853 132.682C114.762 133.844 122.756 127.198 123.116 118.331L126.915 24.6889Z" fill="#FFFFFF"/>
+                <path d="M418.494 278.193C418.667 284.192 415.222 289.722 409.722 292.275L331.151 328.739C321.259 333.329 309.829 326.475 309.392 315.69L303.638 173.868C303.328 166.233 308.848 159.575 316.489 158.368L397.408 145.592C406.515 144.154 414.826 150.954 415.088 160.059L418.494 278.193Z" fill="#FFFFFF"/>
+                <path d="M297.585 24.6889C297.237 16.1277 304.171 9 312.847 9H395.888C404.154 9 410.921 15.495 411.156 23.6557L413.549 106.649C413.771 114.377 408.042 121.021 400.28 122.033L318.647 132.682C309.738 133.844 301.744 127.198 301.384 118.331L297.585 24.6889Z" fill="#FFFFFF"/>
+                <path d="M211.563 9H165.572C157.201 9 150.39 15.6535 150.298 23.9198L149.178 124.945C149.094 132.575 154.792 139.066 162.452 140.065L211.563 146.65L262.048 140.065C269.708 139.066 275.406 132.575 275.322 124.945L274.202 23.9198C274.11 15.6535 267.299 9 258.928 9H211.563Z" fill="#FFFFFF"/>
+                <path d="M155.528 357.597L211.561 384.239L268.968 357.597C274.381 355.085 277.811 349.684 277.746 343.779L275.956 182.291C275.855 173.181 267.672 166.263 258.582 167.514C258.375 167.543 258.166 167.56 257.957 167.56H166.54C166.331 167.56 166.121 167.543 165.914 167.514C156.825 166.263 148.642 173.181 148.541 182.291L146.751 343.779C146.685 349.684 150.116 355.085 155.528 357.597Z" fill="#4D6F8B"/>
+            </svg>
+            <span>IGUDAR</span>
+        </a>
+        <a class="top-cta" href="#demo" data-cta="header">Richiedi una demo</a>
+    </header>
+
+    <main>
+        <div class="stage">
+            <div class="player" id="player">
+                <video id="v" playsinline muted preload="metadata" width="1920" height="1080"
+                    poster="/assets/igudar-video-poster.webp"
+                    aria-label="Video: IGUDAR in 3 minuti, con sottotitoli in italiano"></video>
+                <script>
+                    // Sceglie la risoluzione prima che il parser vada avanti: nessuna attesa su file JS esterni.
+                    (function () {
+                        var v = document.getElementById('v');
+                        var c = navigator.connection || {};
+                        var slow = c.saveData || /(^|-)2g|3g/.test(c.effectiveType || '');
+                        var px = (v.clientWidth || window.innerWidth) * Math.min(window.devicePixelRatio || 1, 3) * 9 / 16;
+                        var h = slow ? 540 : px > 820 ? 1080 : px > 560 ? 720 : 540;
+                        v.src = '/assets/igudar-video-' + h + '.mp4';
+                        v.dataset.h = h;
+                    })();
+                </script>
+                <noscript><video controls playsinline preload="metadata" poster="/assets/igudar-video-poster.webp"
+                        src="/assets/igudar-video-720.mp4" style="position:absolute;inset:0;width:100%;height:100%"></video></noscript>
+
+                <button class="layer unmute" id="unmute" type="button" hidden>
+                    <span class="pill">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z" /><path d="m22 9-6 6M16 9l6 6" /></svg>
+                        Tocca per attivare l’audio
+                    </span>
+                </button>
+                <button class="layer bigplay" id="bigplay" type="button" hidden aria-label="Guarda il video, 3 minuti">
+                    <span class="disc"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5L7 4.5Z" /></svg></span>
+                    <span class="len" aria-hidden="true">3:00</span>
+                </button>
+                <div class="layer endcard" id="endcard" hidden>
+                    <p>Vuoi vedere IGUDAR sul sito del tuo evento?</p>
+                    <div class="row">
+                        <a class="btn btn-main" href="#demo" data-cta="endcard">Richiedi una demo</a>
+                        <button class="btn btn-ghost" type="button" id="replay">Rivedi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="wrap intro">
+            <div>
+                <h1>IGUDAR in 3 minuti</h1>
+                <p class="lead">Si parte dall’indirizzo dell’evento. IGUDAR ricostruisce il sito in 3D, simula i veicoli
+                    che cercano di entrare e indica quante barriere servono, di che classe e dove. Il piano lo verifica e
+                    lo firma il professionista incaricato.</p>
+                <div class="actions" id="mainActions">
+                    <a class="btn btn-main" href="#demo" data-cta="hero">Richiedi una demo</a>
+                    <a class="link" href="/" data-cta="site">Vai al sito</a>
+                </div>
+                <p class="status">Oggi è validato il modulo sul rischio veicolare, provato sul caso di Piazzale XX
+                    Settembre a Pordenone. Esodo, capienza e accesso dei soccorsi sono in sviluppo.</p>
+            </div>
+
+            <nav class="chapters" aria-labelledby="chTitle">
+                <h2 id="chTitle">Capitoli</h2>
+                <ol>
+                    <li><button class="chapter" type="button" data-t="0"><time>0:00</time>Il problema</button></li>
+                    <li><button class="chapter" type="button" data-t="44"><time>0:44</time>Cos’è IGUDAR</button></li>
+                    <li><button class="chapter" type="button" data-t="62"><time>1:02</time>Dall’indirizzo al modello 3D del sito</button></li>
+                    <li><button class="chapter" type="button" data-t="74"><time>1:14</time>La simulazione dei veicoli</button></li>
+                    <li><button class="chapter" type="button" data-t="95"><time>1:35</time>Barriere: quante, di che classe, dove</button></li>
+                    <li><button class="chapter" type="button" data-t="127"><time>2:07</time>Tavole CAD e relazione tecnica</button></li>
+                    <li><button class="chapter" type="button" data-t="139"><time>2:19</time>Cosa cambia per uno studio tecnico</button></li>
+                </ol>
+            </nav>
+        </section>
+
+        <section class="demo" id="demo" aria-labelledby="demoTitle">
+            <div class="wrap">
+                <h2 id="demoTitle">Richiedi una demo</h2>
+                <p class="lead">Descrivici il sito e l’evento: ti mostriamo IGUDAR su quel caso e valutiamo insieme se ha
+                    senso un progetto pilota.</p>
+
+                <form id="demoForm" novalidate>
+                    <div class="row2">
+                        <label class="f">Nome *
+                            <input type="text" name="firstname" required maxlength="80" autocomplete="given-name">
+                        </label>
+                        <label class="f">Cognome *
+                            <input type="text" name="lastname" required maxlength="80" autocomplete="family-name">
+                        </label>
+                    </div>
+                    <div class="row2">
+                        <label class="f">Email di lavoro *
+                            <input type="email" name="email" required maxlength="120" autocomplete="email" inputmode="email"
+                                placeholder="tu@organizzazione.it">
+                        </label>
+                        <label class="f">Sei *
+                            <!-- i value devono restare identici alle opzioni della property "sei" su HubSpot -->
+                            <select name="role" required>
+                                <option value="">Seleziona…</option>
+                                <option value="Professionista della sicurezza">Professionista della sicurezza</option>
+                                <option value="Organizzatore eventi">Organizzatore eventi</option>
+                                <option value="Studio tecnico / geometra">Studio tecnico / geometra</option>
+                                <option value="Comune / Pubblica Amministrazione">Comune / Pubblica Amministrazione</option>
+                                <option value="Altro">Altro</option>
+                            </select>
+                        </label>
+                    </div>
+                    <label class="f">Evento o sito (facoltativo)
+                        <textarea name="message" maxlength="2000" rows="3"
+                            placeholder="Es. concerto in piazza, 5.000 persone, a giugno"></textarea>
+                    </label>
+                    <label class="consent">
+                        <input type="checkbox" name="consent" value="yes">
+                        <span>Accetto di ricevere altre comunicazioni da IGUDAR.</span>
+                    </label>
+                    <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <button class="btn btn-main" type="submit" id="submitBtn">Invia la richiesta</button>
+                    <p class="fine">Inviando accetti la nostra <a href="/privacy-policy.html">privacy policy</a>.</p>
+                    <p class="msg msg-ok" id="okMsg" role="status" aria-live="polite" hidden><strong>Richiesta inviata.</strong> Ti ricontattiamo all’email che hai indicato.</p>
+                    <p class="msg msg-err" id="errMsg" role="alert" hidden><strong>Invio non riuscito.</strong> Riprova, o scrivici a <a href="mailto:contact@igudar.it">contact@igudar.it</a>.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 IGUDAR</span>
+            <a href="/">igudar.it</a>
+            <a href="mailto:contact@igudar.it">contact@igudar.it</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/cookie-policy.html">Cookie Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var v = document.getElementById('v');
+            var unmuteBtn = document.getElementById('unmute');
+            var playBtn = document.getElementById('bigplay');
+            var endcard = document.getElementById('endcard');
+            var chapters = [].slice.call(document.querySelectorAll('.chapter'));
+            var reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+            var engaged = false; // l'utente ha toccato il video: audio attivo e controlli nativi
+
+            function track(event, extra) {
+                var data = { event: event, video_title: 'IGUDAR in 3 minuti', video_quality: v.dataset.h + 'p' };
+                for (var k in extra) data[k] = extra[k];
+                window.dataLayer.push(data);
+            }
+
+            // ?t=74 o #t=74 apre il video su un capitolo (link condivisibili + Google key moments)
+            var startAt = 0;
+            var m = (location.search + location.hash).match(/[?&#]t=(\d+)/);
+            if (m) startAt = Math.min(+m[1], 175);
+            if (startAt) v.addEventListener('loadedmetadata', function () { v.currentTime = startAt; }, { once: true });
+
+            function engage(fromStart) {
+                if (!engaged) {
+                    engaged = true;
+                    v.controls = true;
+                    unmuteBtn.hidden = true;
+                    playBtn.hidden = true;
+                    track('video_unmute', { video_current_time: Math.round(v.currentTime) });
+                }
+                v.muted = false;
+                // chi attiva l'audio nei primi 30 s vuole sentire il video dall'inizio
+                if (fromStart && v.currentTime < 30) v.currentTime = startAt;
+                endcard.hidden = true;
+                return v.play();
+            }
+
+            unmuteBtn.addEventListener('click', function () { engage(true); });
+            playBtn.addEventListener('click', function () { engage(false); });
+
+            // autoplay muto: funziona anche nei browser interni di LinkedIn e Instagram (i sottotitoli sono nel video)
+            function autoplay() {
+                var p = v.play();
+                if (!p || !p.then) return;
+                p.then(function () {
+                    if (!engaged) unmuteBtn.hidden = false;
+                }).catch(function (err) {
+                    if (engaged) return;
+                    // pagina aperta in background (webview, tab): riprova quando diventa visibile
+                    if (err && err.name === 'AbortError' && document.hidden) {
+                        document.addEventListener('visibilitychange', function retry() {
+                            if (document.hidden) return;
+                            document.removeEventListener('visibilitychange', retry);
+                            if (!engaged) autoplay();
+                        });
+                        return;
+                    }
+                    // autoplay vietato (es. iOS in risparmio energetico): serve un tocco
+                    playBtn.hidden = false;
+                });
+            }
+            // arrivo dalla home (ha appena cliccato "Guarda"): proviamo subito con l'audio,
+            // se il browser lo blocca (es. Safari iOS) si torna all'autoplay muto
+            function autoplayWithSound() {
+                v.muted = false;
+                var p = v.play();
+                if (!p || !p.then) { v.muted = true; return autoplay(); }
+                p.then(function () {
+                    engaged = true;
+                    v.controls = true;
+                    unmuteBtn.hidden = true;
+                    track('video_unmute', { video_current_time: 0, video_autoplay_sound: true });
+                }).catch(function () {
+                    v.muted = true;
+                    autoplay();
+                });
+            }
+            var fromSite = document.referrer.indexOf(location.origin + '/') === 0;
+            if (reduceMotion) {
+                playBtn.hidden = false;
+            } else {
+                v.preload = 'auto';
+                if (fromSite) autoplayWithSound(); else autoplay();
+            }
+
+            v.addEventListener('playing', function once() {
+                v.removeEventListener('playing', once);
+                track('video_start', { video_autoplay: !engaged });
+            });
+
+            // capitoli + avanzamento
+            // percentuale sul tempo davvero guardato: i salti tra capitoli non contano
+            var marks = [10, 25, 50, 75, 90], sent = {}, watched = 0, lastT = 0;
+            v.addEventListener('timeupdate', function () {
+                var t = v.currentTime, d = v.duration || 180, step = t - lastT;
+                if (step > 0 && step < 1.5) watched += step;
+                lastT = t;
+                for (var i = chapters.length - 1; i >= 0; i--) {
+                    if (t >= +chapters[i].dataset.t) break;
+                }
+                chapters.forEach(function (c, j) { c.setAttribute('aria-current', j === i ? 'true' : 'false'); });
+                var pct = watched / d * 100;
+                marks.forEach(function (mk) {
+                    if (pct >= mk && !sent[mk]) {
+                        sent[mk] = true;
+                        track('video_progress', { video_percent: mk, video_sound: !v.muted });
+                    }
+                });
+            });
+
+            v.addEventListener('ended', function () {
+                track('video_complete', { video_sound: !v.muted });
+                if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen();
+                if (v.webkitDisplayingFullscreen && v.webkitExitFullscreen) v.webkitExitFullscreen();
+                unmuteBtn.hidden = true;
+                endcard.hidden = false;
+            });
+            document.getElementById('replay').addEventListener('click', function () {
+                v.currentTime = 0;
+                engage(false);
+                track('video_replay', {});
+            });
+
+            chapters.forEach(function (c) {
+                c.addEventListener('click', function () {
+                    v.currentTime = +c.dataset.t;
+                    engage(false);
+                    var r = v.getBoundingClientRect();
+                    if (r.top < 0 || r.bottom > window.innerHeight) {
+                        v.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+                    }
+                    track('video_chapter', { video_chapter: c.textContent.replace(/^\d+:\d+/, '').trim() });
+                });
+            });
+
+            // CTA: pausa il video (ha già fatto il suo lavoro) e traccia la sorgente
+            document.addEventListener('click', function (e) {
+                var a = e.target.closest && e.target.closest('[data-cta]');
+                if (!a) return;
+                track('cta_click', { cta_position: a.dataset.cta, video_current_time: Math.round(v.currentTime) });
+                if (a.getAttribute('href') === '#demo') {
+                    v.pause();
+                    endcard.hidden = true;
+                    setTimeout(function () {
+                        var first = document.querySelector('#demoForm input[name=firstname]');
+                        if (first) first.focus({ preventScroll: true });
+                    }, reduceMotion ? 0 : 450);
+                }
+            });
+
+            if ('IntersectionObserver' in window) {
+                // muto e fuori schermo = nessuno lo sta guardando: risparmiamo banda
+                new IntersectionObserver(function (en) {
+                    if (engaged || !v.muted) return;
+                    if (en[0].isIntersecting) { if (v.paused && !v.ended && unmuteBtn.hidden === false) v.play().catch(function () {}); }
+                    else v.pause();
+                }, { threshold: 0.25 }).observe(v);
+            }
+
+            // ============================================================
+            // FORM: invio a HubSpot, stesso form "Richiedi Demo" della home
+            // ============================================================
+            var form = document.getElementById('demoForm');
+            var okMsg = document.getElementById('okMsg');
+            var errMsg = document.getElementById('errMsg');
+            var submitBtn = document.getElementById('submitBtn');
+            var HS_ENDPOINT = 'https://api-eu1.hsforms.com/submissions/v3/integration/submit/149175563/0ce6ea17-ca82-4e4e-a0c9-7c7104b44bf8';
+
+            function val(name) {
+                var el = form.elements[name];
+                return el && el.value ? el.value.trim() : '';
+            }
+            function readCookie(name) {
+                try {
+                    var match = document.cookie.match(new RegExp('(^|;\\s*)' + name + '=([^;]*)'));
+                    return match ? decodeURIComponent(match[2]) : '';
+                } catch (err) { return ''; }
+            }
+            function sourceLine() {
+                // la provenienza (LinkedIn, Instagram, campagna) finisce nel messaggio su HubSpot
+                var q = new URLSearchParams(location.search), parts = [];
+                ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) {
+                    if (q.get(k)) parts.push(k + '=' + q.get(k));
+                });
+                if (!parts.length && /instagram/i.test(navigator.userAgent)) parts.push('app=instagram');
+                if (!parts.length && /linkedin/i.test(navigator.userAgent)) parts.push('app=linkedin');
+                if (!parts.length && document.referrer) parts.push('referrer=' + document.referrer);
+                return 'Fonte: pagina video' + (parts.length ? ' (' + parts.join(', ') + ')' : '') +
+                    ', video guardato per ' + Math.round(watched) + ' s su 180';
+            }
+
+            form.addEventListener('submit', function (ev) {
+                ev.preventDefault();
+                okMsg.hidden = true;
+                errMsg.hidden = true;
+                form.classList.add('sent');
+                if (form.elements._honey.value) return;
+                if (!form.checkValidity()) {
+                    var bad = form.querySelector(':invalid');
+                    if (bad) bad.focus();
+                    return;
+                }
+                form.classList.add('loading');
+                submitBtn.disabled = true;
+
+                var note = val('message') || 'Richiesta demo dalla pagina video.';
+                var fields = [
+                    { objectTypeId: '0-1', name: 'firstname', value: val('firstname') },
+                    { objectTypeId: '0-1', name: 'lastname', value: val('lastname') },
+                    { objectTypeId: '0-1', name: 'email', value: val('email') },
+                    { objectTypeId: '0-1', name: 'sei', value: val('role') },
+                    { objectTypeId: '0-1', name: 'message', value: note + '\n\n' + sourceLine() }
+                ];
+                var context = { pageUri: location.href, pageName: document.title };
+                var hutk = readCookie('hubspotutk');
+                if (hutk) context.hutk = hutk;
+                var consent = !!form.elements.consent.checked;
+
+                fetch(HS_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        fields: fields,
+                        context: context,
+                        legalConsentOptions: {
+                            consent: {
+                                consentToProcess: true,
+                                text: 'Per fornirti il servizio, abbiamo bisogno del tuo consenso per archiviare e trattare i tuoi dati personali.',
+                                communications: [{
+                                    value: consent,
+                                    subscriptionTypeId: 3456756631,
+                                    text: 'Accetto di ricevere altre comunicazioni da IGUDAR.'
+                                }]
+                            }
+                        }
+                    })
+                }).then(function (res) {
+                    if (!res.ok) throw new Error('hubspot ' + res.status);
+                    form.classList.remove('loading');
+                    okMsg.hidden = false;
+                    form.reset();
+                    form.classList.remove('sent');
+                    track('generate_lead', { form_name: 'demo_video', lead_role: fields[3].value });
+                }).catch(function () {
+                    form.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    errMsg.hidden = false;
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

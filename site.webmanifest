@@ -1,7 +1,7 @@
 {
-  "name": "IGUDAR Risk Intelligence",
+  "name": "IGUDAR",
   "short_name": "IGUDAR",
-  "description": "Risk intelligence per la sicurezza degli spazi pubblici.",
+  "description": "Piani di safety e security per eventi: modello 3D del sito e simulazione del rischio veicolare.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0E1114",

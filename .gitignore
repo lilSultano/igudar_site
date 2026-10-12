@@ -1,0 +1,5 @@
+.DS_Store
+# 4K masters (>100 MB, over GitHub's file limit); the site uses assets/igudar-demo-*.mp4
+assets/Copertura_*.mp4
+# master del video per i social (1 GB, 4K); la pagina /video/ usa assets/igudar-video-*.mp4
+assets/Igudar.mp4
