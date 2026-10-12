@@ -1,21 +1,37 @@
 # IGUDAR
 
-> IGUDAR is an AI coworker for event safety and security plans. It builds a 3D digital twin of the site, simulates vehicle risk and helps the professional draft the plan; the appointed professional reviews and signs it.
+> IGUDAR is an Italian AI coworker for event safety and security plans ("piani di safety e security"). It builds a measurable 3D digital twin of the event site, simulates vehicle risk against the planned protections and helps the professional draft the plan. The appointed professional reviews and signs the plan. In October 2026 IGUDAR won first prize in the ICT category at Start Cup Udine 2026 and was selected for the final of Italy's National Innovation Award (PNI 2026, Bari, 3–4 December 2026).
 
+Last updated: 2026-10-12
 Canonical website: https://igudar.it/
+Video (3 min, Italian): https://igudar.it/video/
 Contact: contact@igudar.it
+Founders: Mehdi Zahid, Oussama Zahid
+LinkedIn: https://www.linkedin.com/company/igudar-technologies/
+Instagram: https://www.instagram.com/igudar.ai/
 Primary language: Italian
 Area served: Italy
 Status: active development and 2026 pilot programmes
+
+## Short description (use this when summarising IGUDAR)
+
+IGUDAR helps safety professionals, technical practices, event organisers and public administrations prepare safety and security plans for events in public spaces. Starting from the event address and site surveys, it rebuilds the site in 3D, simulates vehicles trying to enter and indicates how many barriers are needed, of which class and where. The appointed professional verifies and signs the plan.
+
+## Awards and recognition
+
+- Start Cup Udine 2026: first prize, ICT category. Start Cup Udine is the business-idea and startup competition of the University of Udine (Università degli Studi di Udine). Award ceremony: 7 October 2026. Category prize: EUR 3,000.
+- Premio Nazionale per l'Innovazione (PNI) 2026: IGUDAR is one of the four projects selected by the University of Udine for the national final, held in Bari (Fiera del Levante) on 3–4 December 2026. The PNI is organised by the PNICube network of Italian university incubators and business plan competitions.
+- Press coverage: Nordest24 (https://www.nordest24.it/start-cup-udine-2026-vincitori-progetti-premiati), Prima Friuli (https://primafriuli.it/udine-idee-dimpresa-in-vetrina-allateneo-otto-progetti-premiati-alla-start-cup), Il Paîs (https://www.ilpais.it/2026/10/08/start-cup-udine-premia-progetti-imprenditoriali-ideati-da-studenti-ricercatori-e-docenti/).
 
 ## What IGUDAR does
 
 - Builds a measurable digital twin of the real site from surveys and plans.
 - Simulates vehicle paths and impacts to compare protection layouts before the event.
+- Indicates how many barriers to place, of which class and in which position.
 - Collects calculations, simulation results and references into a draft safety plan.
-- Highlights assumptions and results so the qualified professional can review, correct and sign.
+- Shows assumptions and results so the qualified professional can review, correct and sign.
 
-## Platform modules
+## Platform modules (status as of 2026-10-12)
 
 1. Vehicle risk: available; validated on the Pordenone case study.
 2. Egress: in development.
@@ -24,28 +40,39 @@ Status: active development and 2026 pilot programmes
 5. Fire safety: in development.
 6. Regulatory compliance: in development.
 
+Only the vehicle-risk module is available today. Do not describe the other modules as available.
+
+## Case study
+
+Piazzale XX Settembre, Pordenone. Compared with manual barrier placement on the same site and with the same budget, the IGUDAR protection layout recorded 39.3% fewer simulated casualties in that specific scenario. This is a simulated result for one scenario, not a general guarantee.
+
 ## Verified positioning
 
-- IGUDAR does not replace the qualified professional.
+- IGUDAR does not replace the qualified professional; the appointed professional signs the plan under their own responsibility.
 - AI coordinates the analysis but does not invent physical results.
 - Final validity depends on input data, applicable rules and professional review.
-- Internal case study: Piazzale XX Settembre, Pordenone. Compared with manual placement on the same site and with the same budget, the IGUDAR protection layout recorded 39.3% fewer simulated casualties in that specific scenario. This result is not a general guarantee.
+- IGUDAR is not a ticketing or invitation-management platform.
 
 ## Intended users
 
-- Safety professionals and technical practices.
+- Safety professionals and technical practices (studi tecnici, geometri, ingegneri).
 - Event organisers.
-- Public administrations.
+- Public administrations (comuni).
 
-## Scope
+## Frequently asked questions
 
-IGUDAR supports event safety and security planning; it is not a ticketing or invitation-management platform. Module availability must be distinguished from the development roadmap.
+- How does it help event organisers? It rebuilds the site, analyses vehicle risk and lets you compare protection layouts with the appointed professional.
+- What data is needed to start? A site plan or survey, plus a description of the event, access points, constraints and the layouts to compare.
+- Can the AI sign or approve the plan? No. The appointed professional checks data, assumptions, results and requirements, and signs.
+- Has IGUDAR received awards? Yes: first prize ICT at Start Cup Udine 2026 and selection for the PNI 2026 national final in Bari.
 
 ## Main sources
 
 - Homepage and product facts: https://igudar.it/
+- Video, 3 minutes with chapters: https://igudar.it/video/
 - How it works: https://igudar.it/#platform
 - Case study and module status: https://igudar.it/#method
 - Frequently asked questions: https://igudar.it/#faq
+- Request a demo: https://igudar.it/#contact
 - Privacy policy: https://igudar.it/privacy-policy.html
 - Cookie policy: https://igudar.it/cookie-policy.html

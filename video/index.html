@@ -153,9 +153,14 @@
         .loading .btn-main { opacity: .6; pointer-events: none; }
 
         footer { padding: 26px 0 calc(80px + env(safe-area-inset-bottom)); color: var(--text-3); font-size: 13px; }
-        footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+        .foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 24px; }
+        .foot-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; }
+        .foot-links > * { display: inline-flex; align-items: center; min-height: 40px; white-space: nowrap; }
         footer a { text-decoration: none; }
         footer a:hover { color: #fff; }
+        .footer-social { display: flex; gap: 10px; }
+        .footer-social a { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 50%; color: var(--text-2); }
+        .footer-social a:hover { border-color: #fff; color: #fff; }
 
         @media (min-width: 720px) {
             /* su computer il video riempie la prima schermata; la CTA sta nell'intestazione */
@@ -192,10 +197,14 @@
   "contentUrl": "https://igudar.it/assets/igudar-video-1080.mp4",
   "embedUrl": "https://igudar.it/video/",
   "inLanguage": "it-IT",
+  "isPartOf": { "@id": "https://igudar.it/#website" },
+  "about": { "@id": "https://igudar.it/#platform" },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://igudar.it/#organization",
     "name": "IGUDAR",
     "url": "https://igudar.it/",
+    "sameAs": ["https://www.linkedin.com/company/igudar-technologies/", "https://www.instagram.com/igudar.ai/"],
     "logo": { "@type": "ImageObject", "url": "https://igudar.it/assets/logo-search.png", "width": 512, "height": 512 }
   },
   "hasPart": [
@@ -382,12 +391,18 @@
     </main>
 
     <footer>
-        <div class="wrap">
-            <span>&copy; 2026 IGUDAR</span>
-            <a href="/">igudar.it</a>
-            <a href="mailto:contact@igudar.it">contact@igudar.it</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-            <a href="/cookie-policy.html">Cookie Policy</a>
+        <div class="wrap foot">
+            <div class="foot-links">
+                <span>&copy; 2026 IGUDAR</span>
+                <a href="/">igudar.it</a>
+                <a href="mailto:contact@igudar.it">contact@igudar.it</a>
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/cookie-policy.html">Cookie Policy</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/igudar-technologies/" rel="me noopener" target="_blank" aria-label="IGUDAR su LinkedIn" data-aria-it="IGUDAR su LinkedIn" data-aria-en="IGUDAR on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+                <a href="https://www.instagram.com/igudar.ai/" rel="me noopener" target="_blank" aria-label="IGUDAR su Instagram" data-aria-it="IGUDAR su Instagram" data-aria-en="IGUDAR on Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+            </div>
         </div>
     </footer>
 

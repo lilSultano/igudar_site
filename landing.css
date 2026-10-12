@@ -440,3 +440,31 @@
 @media (prefers-reduced-motion: reduce) {
     .hybrid-page .nav, .media-chapter, .light-page .media-stage .media-toggle, .light-page .media-stage .validation-expand { transition: none; }
 }
+
+/* Footer: logo | link | contatti e social, poi riga legale. In colonna su telefono. */
+.light-page .footer { padding: 48px 0 28px; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; align-items: center; gap: 24px 56px; }
+.footer-grid .footer-brand { gap: 8px; align-items: flex-start; text-align: left; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 4px 28px; }
+.footer-nav a, .footer-legal a, .footer-mail { display: inline-flex; align-items: center; min-height: 44px; color: #5c6167; font-size: 15px; text-decoration: none; white-space: nowrap; }
+.footer-nav a:hover, .footer-legal a:hover, .footer-mail:hover { color: var(--ink); }
+.footer-contact { display: flex; align-items: center; gap: 18px; }
+.footer-social { display: flex; gap: 10px; }
+.footer-social a { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #e4e0d6; border-radius: 50%; color: var(--ink); transition: background-color .15s, border-color .15s, color .15s; }
+.footer-social a:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 24px; margin-top: 28px; padding-top: 0; background: linear-gradient(#e4e0d6, #e4e0d6) top / 100% 1px no-repeat content-box; }
+.footer-bottom > * { padding-top: 12px; }
+.light-page .footer-bottom .footer-copy { color: #73767a; font-size: 14px; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 0 24px; }
+.footer-legal a { font-size: 14px; color: #73767a; }
+@media (max-width: 1000px) {
+    .footer-grid { grid-template-columns: minmax(0, 1fr) auto; }
+    .footer-nav { grid-column: 1 / -1; grid-row: 2; }
+}
+@media (max-width: 640px) {
+    .light-page .footer { padding: 40px 0 96px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+    .footer-nav { grid-row: auto; gap: 0 22px; }
+    .footer-contact { flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    .footer-bottom { margin-top: 20px; }
+}
